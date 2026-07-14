@@ -16,7 +16,8 @@ func main() {
 	c := pokeapi.NewClient(httpClient, cache)
 
 	cfg := config{
-		client: c,
+		client:  c,
+		pokedex: make(map[string]pokeapi.PokemonInfo),
 	}
 
 	startRepl(&cfg)
